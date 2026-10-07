@@ -1,675 +1,504 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Anaan Fathima — Computer Science</title>
+    <title>Anaan Fathima — Computer Science</title>
 
-<meta name="description" content="Anaan Fathima — Integrated MSc Computer Science student at CUSAT, learning C++, Python, AI and Data Science.">
+    <meta
+        name="description"
+        content="Anaan Fathima — Integrated MSc Computer Science student at CUSAT, learning C++, Python, AI and Data Science."
+    >
 
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-/* ===== BROWN & CREAM COLOR THEME ===== */
-
-:root {
-    --cream: #f6efe3;
-    --cream-light: #fffaf2;
-    --cream-dark: #eadbc8;
-
-    --brown: #5a3828;
-    --brown-dark: #321d14;
-    --brown-medium: #76503d;
-    --brown-light: #9a6b50;
-
-    --border: #d8c1aa;
-}
-
-
-/* BODY */
-
-body {
-    background: var(--cream);
-    color: var(--brown-dark);
-}
-
-
-/* NAVIGATION */
-
-nav {
-    background: var(--cream-light);
-    border-bottom: 1px solid var(--border);
-}
-
-.logo {
-    color: var(--brown);
-}
-
-.logo b {
-    color: var(--brown-light);
-}
-
-.links a {
-    color: var(--brown);
-}
-
-.links a:hover {
-    color: var(--brown-light);
-}
-
-
-/* HERO */
-
-.hero {
-    background: var(--cream);
-}
-
-.gradient {
-    background: linear-gradient(
-        135deg,
-        #5a3828,
-        #a66f50
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
-/* AVAILABILITY */
-
-.availability {
-    color: var(--brown-medium);
-}
-
-.dot {
-    background: var(--brown-light);
-}
-
-
-/* BUTTONS */
-
-.btn {
-    color: var(--brown);
-    border-color: var(--brown);
-    background: transparent;
-}
-
-.btn:hover {
-    background: var(--brown);
-    color: var(--cream-light);
-}
-
-.btn.primary {
-    background: var(--brown);
-    color: var(--cream-light);
-}
-
-.btn.primary:hover {
-    background: var(--brown-dark);
-}
-
-
-/* SECTIONS */
-
-section {
-    background: var(--cream);
-}
-
-
-/* HEADINGS */
-
-h1,
-h2,
-h3 {
-    color: var(--brown-dark);
-}
-
-
-/* PARAGRAPHS */
-
-p {
-    color: var(--brown-medium);
-}
-
-
-/* CARDS */
-
-.card {
-    background: var(--cream-light);
-    border-color: var(--border);
-}
-
-.card:hover {
-    border-color: var(--brown-light);
-}
-
-
-/* LABELS */
-
-.label {
-    color: var(--brown-light);
-}
-
-
-/* TAGS */
-
-.tag {
-    background: var(--cream-dark);
-    color: var(--brown);
-    border-color: var(--border);
-}
-
-
-/* EDUCATION TIMELINE */
-
-.item {
-    border-left-color: var(--border);
-}
-
-.item small {
-    color: var(--brown-light);
-}
-
-
-/* CODE BOX */
-
-.code {
-    background: var(--brown-dark);
-    color: var(--cream);
-    border-color: var(--brown-medium);
-}
-
-.code .blue {
-    color: #d6a47d;
-}
-
-.code .white {
-    color: #f7e9d5;
-}
-
-
-/* CONTACT BOX */
-
-.contact {
-    background: var(--cream-dark);
-    border-color: var(--border);
-}
-
-
-/* PHOTO BORDER */
-
-.photo {
-    border-color: var(--brown);
-}
-
-
-/* PROJECT ARROW */
-
-.arrow {
-    color: var(--brown);
-}
-
-
-/* FOOTER */
-
-footer {
-    background: var(--brown-dark);
-    color: var(--cream);
-}
-
-footer a {
-    color: var(--cream);
-}
-
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= NAVIGATION ================= -->
+
 <nav>
-<div class="container nav">
+    <div class="container nav">
 
-<a class="logo" href="#home">AF<b>.</b></a>
+        <a class="logo" href="#home">AF<b>.</b></a>
 
-<div class="links">
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</div>
+        <div class="links">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
 
-<button class="menu" onclick="document.querySelector('.links').classList.toggle('show')">
-☰
-</button>
+        <button class="menu">☰</button>
 
-</div>
+    </div>
 </nav>
 
 
 <main>
 
-<!-- HERO SECTION -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
-<div class="container hero-grid">
+    <div class="container hero-grid">
 
-<div>
+        <div class="hero-content">
 
-<span class="availability">
-<i class="dot"></i> Open to learning & opportunities
-</span>
+            <span class="availability">
+                <i class="dot"></i>
+                Open to learning & opportunities
+            </span>
 
-<h1>
-Hi, I'm<br>
-<span class="gradient">Anaan.</span>
-</h1>
+            <h1>
+                Hi, I'm<br>
+                <span class="gradient">Anaan.</span>
+            </h1>
 
-<p>
-I'm an Integrated MSc Computer Science student at Cochin University of Science and Technology (CUSAT). I'm interested in programming, Artificial Intelligence and Data Science, and I'm currently strengthening my skills in C++ and Python through continuous learning and projects.
-</p>
+            <p>
+                I'm an Integrated MSc Computer Science student at
+                Cochin University of Science and Technology (CUSAT).
+                I'm interested in programming, Artificial Intelligence
+                and Data Science, and I'm currently strengthening my
+                skills in C++ and Python through continuous learning
+                and projects.
+            </p>
 
-<div class="buttons">
+            <div class="buttons">
 
-<a class="btn primary" href="#projects">
-View Projects ↓
-</a>
+                <a class="btn primary" href="#projects">
+                    View Projects ↓
+                </a>
 
-<a class="btn" href="#contact">
-Contact Me
-</a>
+                <a class="btn" href="#contact">
+                    Contact Me
+                </a>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
 
-<div class="photo-wrap">
+        <!-- PHOTO -->
 
-<!-- Replace photo.jpg with your actual photo filename -->
+        <div class="photo-wrap">
 
-<img class="photo" src="photo.jpg" alt="Anaan Fathima">
+            <div class="decor-circle circle-one"></div>
+            <div class="decor-circle circle-two"></div>
 
-<div class="code">
+            <img
+                class="photo"
+                src="photo.jpg"
+                alt="Anaan Fathima"
+            >
 
-<span class="blue">class</span>
-<span class="white"> Anaan:</span>
+            <!-- CODE CARD -->
 
-<br>
+            <div class="code">
 
-&nbsp;&nbsp;role =
-<span class="white">"Computer Science Student"</span>
+                <span class="blue">class</span>
+                <span class="white"> Anaan:</span>
 
-<br>
+                <br>
 
-&nbsp;&nbsp;skills =
-<span class="white">["C++", "Python"]</span>
+                &nbsp;&nbsp;role =
+                <span class="white">
+                    "Computer Science Student"
+                </span>
 
-<br>
+                <br>
 
-&nbsp;&nbsp;focus =
-<span class="white">["AI", "Data Science"]</span>
+                &nbsp;&nbsp;skills =
+                <span class="white">
+                    ["C++", "Python"]
+                </span>
 
-<br>
+                <br>
 
-&nbsp;&nbsp;learning =
-<span class="white">True</span>
+                &nbsp;&nbsp;focus =
+                <span class="white">
+                    ["AI", "Data Science"]
+                </span>
 
-</div>
+                <br>
 
-</div>
+                &nbsp;&nbsp;learning =
+                <span class="white">
+                    True
+                </span>
 
-</div>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- ABOUT SECTION -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
-<div class="container">
+    <div class="container">
 
-<span class="label">01 / about</span>
+        <span class="label">01 / about</span>
 
-<h2>About Me</h2>
+        <h2>About Me</h2>
 
-<p class="intro">
+        <p class="intro">
 
-I'm Anaan Fathima, an Integrated MSc Computer Science student at Cochin University of Science and Technology. I enjoy programming, solving problems and exploring different areas of computer science.
+            I'm Anaan Fathima, an Integrated MSc Computer Science
+            student at Cochin University of Science and Technology.
+            I enjoy programming, solving problems and exploring
+            different areas of computer science.
 
-I'm currently building strong foundations in C++ and Python while learning more about Artificial Intelligence, Data Science and Machine Learning.
+            <br><br>
 
-</p>
+            I'm currently building strong foundations in C++ and
+            Python while learning more about Artificial Intelligence,
+            Data Science and Machine Learning.
 
-
-<div class="grid">
-
-<div class="card">
-
-<h3>💻 Programming</h3>
-
-<p>
-Learning and practicing C++ and Python while improving my programming fundamentals and problem-solving skills.
-</p>
-
-</div>
+        </p>
 
 
-<div class="card">
+        <div class="grid">
 
-<h3>🤖 AI & Data Science</h3>
+            <div class="card">
 
-<p>
-Interested in Artificial Intelligence, Machine Learning, Data Science and how technology can be used to solve real-world problems.
-</p>
+                <div class="card-icon">💻</div>
 
-</div>
+                <h3>Programming</h3>
+
+                <p>
+                    Learning and practicing C++ and Python while
+                    improving my programming fundamentals and
+                    problem-solving skills.
+                </p>
+
+            </div>
 
 
-<div class="card">
+            <div class="card">
 
-<h3>🌱 Continuous Learning</h3>
+                <div class="card-icon">🤖</div>
 
-<p>
-Exploring new technologies, building projects and continuously improving my skills throughout my CUSAT journey.
-</p>
+                <h3>AI & Data Science</h3>
 
-</div>
+                <p>
+                    Interested in Artificial Intelligence,
+                    Machine Learning, Data Science and how
+                    technology can be used to solve real-world
+                    problems.
+                </p>
 
-</div>
+            </div>
 
-</div>
+
+            <div class="card">
+
+                <div class="card-icon">🌱</div>
+
+                <h3>Continuous Learning</h3>
+
+                <p>
+                    Exploring new technologies, building projects
+                    and continuously improving my skills throughout
+                    my CUSAT journey.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- EDUCATION SECTION -->
+<!-- ================= EDUCATION ================= -->
 
 <section id="education">
 
-<div class="container">
+    <div class="container">
 
-<span class="label">02 / education</span>
+        <span class="label">02 / education</span>
 
-<h2>Education</h2>
-
-
-<div class="timeline">
-
-<div class="item">
-
-<small>2026 — Present</small>
-
-<h3>
-Cochin University of Science and Technology
-</h3>
-
-<p>
-Integrated M.Sc Computer Science · Interested in AI & Data Science
-</p>
-
-</div>
+        <h2>Education</h2>
 
 
-<div class="item">
+        <div class="timeline">
 
-<small>Completed</small>
+            <div class="item">
 
-<h3>
-Class 12 · Kendriya Vidyalaya NAD
-</h3>
+                <small>2026 — Present</small>
 
-<p>
-Completed school education with a focus on Mathematics, Computer Science and related subjects.
-</p>
+                <h3>
+                    Cochin University of Science and Technology
+                </h3>
 
-</div>
+                <p>
+                    Integrated M.Sc Computer Science ·
+                    Interested in AI & Data Science
+                </p>
 
-</div>
+            </div>
 
-</div>
+
+            <div class="item">
+
+                <small>Completed</small>
+
+                <h3>
+                    Class 12 · Kendriya Vidyalaya NAD
+                </h3>
+
+                <p>
+                    Completed school education with a focus on
+                    Mathematics, Computer Science and related
+                    subjects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- SKILLS SECTION -->
+<!-- ================= SKILLS ================= -->
 
 <section id="skills">
 
-<div class="container">
+    <div class="container">
 
-<span class="label">03 / skills</span>
+        <span class="label">03 / skills</span>
 
-<h2>Tech Stack & Interests</h2>
+        <h2>Tech Stack & Interests</h2>
 
-<p class="intro">
-Technologies and areas that I am currently learning, practicing or interested in exploring.
-</p>
+        <p class="intro">
+            Technologies and areas that I am currently learning,
+            practicing or interested in exploring.
+        </p>
 
 
-<div class="card">
+        <div class="card skills-card">
 
-<div class="tags">
+            <div class="tags">
 
-<span class="tag">C++</span>
+                <span class="tag">C++</span>
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Git</span>
+                <span class="tag">GitHub</span>
+                <span class="tag">Linux</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Data Science</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Cybersecurity</span>
+                <span class="tag">Problem Solving</span>
+                <span class="tag">Graph Theory</span>
 
-<span class="tag">Python</span>
+            </div>
 
-<span class="tag">SQL</span>
+        </div>
 
-<span class="tag">Git</span>
-
-<span class="tag">GitHub</span>
-
-<span class="tag">Linux</span>
-
-<span class="tag">HTML</span>
-
-<span class="tag">CSS</span>
-
-<span class="tag">JavaScript</span>
-
-<span class="tag">Artificial Intelligence</span>
-
-<span class="tag">Data Science</span>
-
-<span class="tag">Machine Learning</span>
-
-<span class="tag">Cybersecurity</span>
-
-<span class="tag">Problem Solving</span>
-
-<span class="tag">Graph Theory</span>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- PROJECTS SECTION -->
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects">
 
-<div class="container">
+    <div class="container">
 
-<span class="label">04 / projects</span>
+        <span class="label">04 / projects</span>
 
-<h2>My Projects</h2>
+        <h2>My Projects</h2>
 
-<p class="intro">
-I'm currently building my programming skills and will be adding projects as I learn and grow.
-</p>
-
-
-<div class="grid">
+        <p class="intro">
+            I'm currently building my programming skills and will
+            be adding projects as I learn and grow.
+        </p>
 
 
-<div class="card project">
-
-<div>
-
-<h3>C++ Practice</h3>
-
-<p>
-Small C++ programs and exercises created while learning programming fundamentals, functions, loops and problem solving.
-</p>
-
-</div>
-
-<span class="arrow">↗</span>
-
-</div>
+        <div class="grid">
 
 
-<div class="card project">
+            <div class="card project">
 
-<div>
+                <div>
 
-<h3>Python Projects</h3>
+                    <h3>C++ Practice</h3>
 
-<p>
-Python programs and projects developed while strengthening my programming fundamentals and exploring data-related concepts.
-</p>
+                    <p>
+                        Small C++ programs and exercises created while
+                        learning programming fundamentals, functions,
+                        loops and problem solving.
+                    </p>
 
-</div>
+                </div>
 
-<span class="arrow">↗</span>
+                <span class="arrow">↗</span>
 
-</div>
-
-
-<div class="card project">
-
-<div>
-
-<h3>Portfolio Website</h3>
-
-<p>
-A personal portfolio website built using HTML, CSS and JavaScript to showcase my learning journey and projects.
-</p>
-
-</div>
-
-<span class="arrow">↗</span>
-
-</div>
+            </div>
 
 
-<div class="card project">
+            <div class="card project">
 
-<div>
+                <div>
 
-<h3>GitHub</h3>
+                    <h3>Python Projects</h3>
 
-<p>
-Follow my coding journey and explore my future projects and experiments.
-</p>
+                    <p>
+                        Python programs and projects developed while
+                        strengthening my programming fundamentals
+                        and exploring data-related concepts.
+                    </p>
 
-</div>
+                </div>
 
-<a
-class="arrow"
-href="https://github.com/Anaanfathima"
-target="_blank">
-↗
-</a>
+                <span class="arrow">↗</span>
 
-</div>
+            </div>
 
-</div>
 
-</div>
+            <div class="card project">
+
+                <div>
+
+                    <h3>Portfolio Website</h3>
+
+                    <p>
+                        A personal portfolio website built using
+                        HTML, CSS and JavaScript to showcase my
+                        learning journey and projects.
+                    </p>
+
+                </div>
+
+                <span class="arrow">↗</span>
+
+            </div>
+
+
+            <div class="card project">
+
+                <div>
+
+                    <h3>GitHub</h3>
+
+                    <p>
+                        Follow my coding journey and explore my
+                        future projects and experiments.
+                    </p>
+
+                </div>
+
+                <a
+                    class="arrow"
+                    href="https://github.com/Anaanfathima"
+                    target="_blank"
+                >
+                    ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- CONTACT SECTION -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
-<div class="container">
+    <div class="container">
 
-<div class="contact">
+        <div class="contact">
 
-<div>
+            <div>
 
-<span class="label">05 / contact</span>
+                <span class="label">05 / contact</span>
 
-<h2>Let's connect.</h2>
+                <h2>Let's connect.</h2>
 
-<p class="intro" style="margin:0">
+                <p class="intro">
+                    I'm always interested in learning, building
+                    projects and connecting with people who share
+                    an interest in technology.
+                </p>
 
-I'm always interested in learning, building projects and connecting with people who share an interest in technology.
-
-</p>
-
-</div>
-
-
-<div class="buttons" style="margin:0">
-
-<a
-class="btn primary"
-href="mailto:anaanfathimats@gmail.com">
-Email
-</a>
+            </div>
 
 
-<a
-class="btn"
-href="https://www.linkedin.com/in/anaan-fathima-t-s-55083b425/"
-target="_blank">
-LinkedIn ↗
-</a>
+            <div class="buttons">
 
+                <a
+                    class="btn primary"
+                    href="mailto:anaanfathimats@gmail.com"
+                >
+                    Email
+                </a>
 
-<a
-class="btn"
-href="https://github.com/Anaanfathima"
-target="_blank">
-GitHub ↗
-</a>
+                <a
+                    class="btn"
+                    href="https://www.linkedin.com/in/anaan-fathima-t-s-55083b425/"
+                    target="_blank"
+                >
+                    LinkedIn ↗
+                </a>
 
+                <a
+                    class="btn"
+                    href="https://github.com/Anaanfathima"
+                    target="_blank"
+                >
+                    GitHub ↗
+                </a>
 
-<a
-class="btn"
-href="https://instagram.com/anaan_.fathiii"
-target="_blank">
-Instagram ↗
-</a>
+                <a
+                    class="btn"
+                    href="https://instagram.com/anaan_.fathiii"
+                    target="_blank"
+                >
+                    Instagram ↗
+                </a>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<div class="container">
+    <div class="container">
 
-© <span id="year"></span> Anaan Fathima · Built with HTML, CSS & JavaScript
+        © <span id="year"></span>
+        Anaan Fathima · Built with HTML, CSS & JavaScript
 
-</div>
+    </div>
 
 </footer>
 
@@ -679,4 +508,3 @@ Instagram ↗
 </body>
 
 </html>
-```
