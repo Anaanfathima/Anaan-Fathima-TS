@@ -64,7 +64,6 @@ document
 
                 event.preventDefault();
 
-
                 target.scrollIntoView({
 
                     behavior: "smooth",
@@ -94,7 +93,7 @@ window.addEventListener("scroll", function () {
     if (window.scrollY > 30) {
 
         nav.style.boxShadow =
-            "0 8px 30px rgba(116, 31, 61, 0.12)";
+            "0 8px 30px rgba(122, 23, 56, 0.25)";
 
     } else {
 
@@ -133,15 +132,9 @@ const interests = [
 
     "Artificial Intelligence",
 
-    "Data Science",
+    "SQL",
 
-    "C++ Programming",
-
-    "Python",
-
-    "Machine Learning",
-
-    "Web Development"
+    "Data Science"
 
 ];
 
@@ -151,7 +144,6 @@ const interestText =
 
 
 let interestIndex = 0;
-
 
 
 setInterval(function () {
