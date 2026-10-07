@@ -1,10 +1,13 @@
-```javascript
-// ===== CURRENT YEAR =====
+// =========================================
+// CURRENT YEAR
+// =========================================
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
 
-// ===== MOBILE MENU =====
+// =========================================
+// MOBILE MENU
+// =========================================
 
 const menuButton = document.querySelector(".menu");
 const links = document.querySelector(".links");
@@ -14,7 +17,9 @@ menuButton.addEventListener("click", function () {
 });
 
 
-// ===== CLOSE MOBILE MENU AFTER CLICKING A LINK =====
+// =========================================
+// CLOSE MOBILE MENU AFTER CLICKING A LINK
+// =========================================
 
 document.querySelectorAll(".links a").forEach(function (link) {
 
@@ -25,20 +30,27 @@ document.querySelectorAll(".links a").forEach(function (link) {
 });
 
 
-// ===== SMOOTH SCROLLING =====
+// =========================================
+// SMOOTH SCROLLING
+// =========================================
 
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
     link.addEventListener("click", function (event) {
 
-        const target = document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(
+            this.getAttribute("href")
+        );
 
         if (target) {
+
             event.preventDefault();
 
             target.scrollIntoView({
-                behavior: "smooth"
+                behavior: "smooth",
+                block: "start"
             });
+
         }
 
     });
@@ -46,17 +58,39 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 });
 
 
-// ===== NAVIGATION SHADOW ON SCROLL =====
+// =========================================
+// NAVIGATION EFFECT ON SCROLL
+// =========================================
 
 window.addEventListener("scroll", function () {
 
     const nav = document.querySelector("nav");
 
-    if (window.scrollY > 50) {
-        nav.style.boxShadow = "0 4px 20px rgba(50, 29, 20, 0.12)";
+    if (window.scrollY > 30) {
+
+        nav.style.boxShadow =
+            "0 8px 30px rgba(116, 31, 61, 0.12)";
+
     } else {
+
         nav.style.boxShadow = "none";
+
     }
 
 });
-```
+
+
+// =========================================
+// CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+// =========================================
+
+document.addEventListener("click", function (event) {
+
+    if (
+        !links.contains(event.target) &&
+        !menuButton.contains(event.target)
+    ) {
+        links.classList.remove("show");
+    }
+
+});
