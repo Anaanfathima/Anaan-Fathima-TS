@@ -2,69 +2,94 @@
 // CURRENT YEAR
 // =========================================
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
 
 
 // =========================================
 // MOBILE MENU
 // =========================================
 
-const menuButton = document.querySelector(".menu");
-const links = document.querySelector(".links");
+const menuButton =
+    document.querySelector(".menu");
+
+const links =
+    document.querySelector(".links");
+
 
 menuButton.addEventListener("click", function () {
+
     links.classList.toggle("show");
-});
-
-
-// =========================================
-// CLOSE MOBILE MENU AFTER CLICKING A LINK
-// =========================================
-
-document.querySelectorAll(".links a").forEach(function (link) {
-
-    link.addEventListener("click", function () {
-        links.classList.remove("show");
-    });
 
 });
 
 
+
 // =========================================
-// SMOOTH SCROLLING
+// CLOSE MENU AFTER CLICKING LINK
 // =========================================
 
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+document
+    .querySelectorAll(".links a")
+    .forEach(function (link) {
 
-    link.addEventListener("click", function (event) {
+        link.addEventListener("click", function () {
 
-        const target = document.querySelector(
-            this.getAttribute("href")
-        );
+            links.classList.remove("show");
 
-        if (target) {
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
+        });
 
     });
 
-});
 
 
 // =========================================
-// NAVIGATION EFFECT ON SCROLL
+// SMOOTH SCROLL
+// =========================================
+
+document
+    .querySelectorAll('a[href^="#"]')
+    .forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const target =
+                document.querySelector(
+                    this.getAttribute("href")
+                );
+
+
+            if (target) {
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "start"
+
+                });
+
+            }
+
+        });
+
+    });
+
+
+
+// =========================================
+// NAVIGATION SHADOW
 // =========================================
 
 window.addEventListener("scroll", function () {
 
-    const nav = document.querySelector("nav");
+    const nav =
+        document.querySelector("nav");
+
 
     if (window.scrollY > 30) {
 
@@ -80,8 +105,9 @@ window.addEventListener("scroll", function () {
 });
 
 
+
 // =========================================
-// CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+// CLOSE MENU WHEN CLICKING OUTSIDE
 // =========================================
 
 document.addEventListener("click", function (event) {
@@ -90,7 +116,52 @@ document.addEventListener("click", function (event) {
         !links.contains(event.target) &&
         !menuButton.contains(event.target)
     ) {
+
         links.classList.remove("show");
+
     }
 
 });
+
+
+
+// =========================================
+// ANIMATED MY INTERESTS
+// =========================================
+
+const interests = [
+
+    "Artificial Intelligence",
+
+    "Data Science",
+
+    "C++ Programming",
+
+    "Python",
+
+    "Machine Learning",
+
+    "Web Development"
+
+];
+
+
+const interestText =
+    document.getElementById("interestText");
+
+
+let interestIndex = 0;
+
+
+
+setInterval(function () {
+
+    interestIndex =
+        (interestIndex + 1) %
+        interests.length;
+
+
+    interestText.textContent =
+        interests[interestIndex];
+
+}, 3000);
